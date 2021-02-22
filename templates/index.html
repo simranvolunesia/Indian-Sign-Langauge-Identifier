@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SLI | Home</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/responsiveslides.css') }}">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="{{ url_for('static', filename='js/responsiveslides.min.js') }}"></script>
+		  <script>
+		    // You can also use "$(window).load(function() {"
+			    $(function () {
+			
+			      // Slideshow 1
+			      $("#slider1").responsiveSlides({
+			        maxwidth: 1600,
+			        maxHeight: 10,
+			        speed: 600
+			      });
+			});
+		  </script>
+	</head>
+	<body>
+		<!---start-Wrap--->
+			<!---start-header--->
+			<div class="header">
+				<div class="wrap">
+					<div class="header-top">
+						<div class="logo">
+							<center>
+							<a href="index.html"><img src="{{ url_for('static', filename='images/logo2.jfif') }}" title="logo"></a>
+							</center>
+						</div>
+						
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<div class="header-top-nav">
+					<div class="wrap">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="login.html">Login</a></li>
+							<li><a href="signup.html">SignUp</a></li>
+							<li><a href="about.html">About</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!---End-header--->
+			<div class="clear"> </div>
+			<!--start-image-slider---->
+					<div class="image-slider">
+						<!-- Slideshow 1 -->
+						    <ul class="rslides" id="slider1">
+						      <li><img src="{{ url_for('static', filename='images/slider1.jpg') }}" alt=""></li>
+						      <li><img src="{{ url_for('static', filename='images/slider2.jpg') }}" alt=""></li>
+						      <li><img src="{{ url_for('static', filename='images/slider3.jpg') }}" alt=""></li>
+						    </ul>
+						 <!-- Slideshow 2 -->
+					</div>
+					<!--End-image-slider---->
+			<!---start-content----->
+			<div class="content">
+				<div class="quit">
+					<p><span class="start">At </span> Your <span class="end">Assistance .</span></p>
+				</div>
+					
+				</div>
+				
+		
+				<div class="clear"> </div>
+			</div>
+			<!---start-box---->
+		</div>
+		<!---start-copy-Right----->
+		<div class="copy-tight">
+			<p style="position: fixed; left: 0; bottom: 0;  width: 100%;">I can't say it in words, but express it.</p>
+		</div>
+		<!---End-copy-Right----->
+			</div>
+			<!---End-content----->
+		</div>
+		<!---End-Wrap--->
+	</body>
+</html>
+

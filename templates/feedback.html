@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> SLI | Feedback</title>
+		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.text{
+			font-family: 'PT Sans Narrow', sans-serif;
+			color: #FFFFFF
+		}
+		.btn
+		{
+		  background-color: #000000
+		}
+		.jumbotron{
+		    margin-top: 0px;
+            text-align: center;
+		    justify-content: center;
+			color:#2c3e50;
+		}
+		#img{
+			float:left;
+			width:40%;
+			height:40%;
+		}
+		#form{
+			font-size: 20px;
+		}
+	</style>
+	</head>
+	<body>
+		<!---start-Wrap--->
+			<!---start-header--->
+
+			<div class="header">
+				<div class="wrap">
+					<div class="header-top">
+						<div class="logo">
+							<center>
+							<a href="index.html"><img src="{{ url_for('static', filename='images/logo2.jfif') }}" title="logo"></a>
+							</center>
+						</div>
+						
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<div class="header-top-nav">
+					<div class="wrap">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="welcome.html">Services</a></li>
+							<li><a href="index2.html">Logout</a></li>
+							<li class="active"><a href="feedback.html">Feedback</a></li>
+							<li><a href="about.html">About</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!---End-header--->
+			
+		<div class="container">
+           <div class="jumbotron">
+                <h1><i class="fa fa-user"></i> Feedback </h1>
+                <p>
+                    <form action="/feedbacksli" method="POST" id="feedback-form">
+                        <input class="form-control" type="text" name = "Submit!!" placeholder="" style="height:200px;">
+				        <input type="submit" class="btn btn-lg form-control text" value="Submit!!">
+                    </form>
+                </p>
+            </div>
+        </div>
+           
+		<div class="copy-tight">
+			<p style="position: fixed; left: 0; bottom: 0;  width: 100%;">I can't say it in words, but express it.</p>
+		</div>
+
+        </div>
+        
+		<!---start-copy-Right----->
+		
+		<!---End-copy-Right----->
+			
+			<!---End-content----->
+		
+		<!---End-Wrap--->
+		<script src="http://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	</body>
+</html>
+

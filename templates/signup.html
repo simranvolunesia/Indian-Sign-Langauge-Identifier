@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> SLI | SignUp</title>
+		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.jumbotron{
+		    margin-top: 0px;
+            text-align: center;
+		    justify-content: center;
+			color:#2c3e50;
+		}
+		#short-time-msg-signup {
+		color:blue;
+		font-weight:bolder; text-align:right; padding: 10px;
+		font-family: 'PT Sans Narrow', sans-serif;
+		}
+		#img{
+			float:left;
+			width:40%;
+			height:40%;
+		}
+		#form{
+			font-size: 20px;
+		}
+	</style>
+		<script>
+	function hideAfterSomeTime(hideTime)
+	{
+		// 5000 = 5 seconds
+		window.setTimeout("document.getElementById('short-time-msg-signup').style.display='none'", (hideTime)?hideTime:5000);
+	}
+	 	</script>
+	</head>
+	<body>
+		<!---start-Wrap--->
+			<!---start-header--->
+		<div id="short-time-msg-signup">
+				{% for message in get_flashed_messages() %}
+				<p>{{ message }}</p>
+				{% endfor %}
+			<script>hideAfterSomeTime()</script>
+		</div>
+			<div class="header">
+				<div class="wrap">
+					<div class="header-top">
+						<div class="logo">
+							<center>
+							<a href="index.html"><img src="{{ url_for('static', filename='images/logo2.jfif') }}" title="logo"></a>
+							</center>
+						</div>
+						
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<div class="header-top-nav">
+					<div class="wrap">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="login.html">Login</a></li>
+							<li class="active"><a href="signup.html">SignUp</a></li>
+			
+							<li><a href="about.html">About</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!---End-header--->
+			
+		<div class="container">
+           <div class="jumbotron">
+                <h1><i class="fa fa-user-plus"></i> SignUp </h1>
+                <p>
+                	<img src="{{ url_for('static', filename='images/capture.png') }}" id="img">
+                    <form action="/signupsli" method="POST" id="form"><br><br>
+                    	<input type="email" name="email" placeholder="email" required><br>
+                        <input type="text" name="username" placeholder="username" required><br>
+                        <input type="password" name="password" placeholder="password" required><br><br>
+                        <input type="submit" onclick="hideAfterSomeTime()" value="SignUp"> <br>
+                    </form>
+
+                </p>
+            </div>
+           
+		<div class="copy-tight">
+			<p style="position: fixed; left: 0; bottom: 0;  width: 100%;">I can't say it in words, but express it.</p>
+		</div>
+
+        </div>
+        
+		<!---start-copy-Right----->
+		
+		<!---End-copy-Right----->
+			
+			<!---End-content----->
+		
+		<!---End-Wrap--->
+		<script src="http://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	</body>
+</html>
+
